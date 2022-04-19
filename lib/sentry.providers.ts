@@ -6,6 +6,6 @@ import { SentryService } from './sentry.service'
 export function createSentryProviders(options: SentryModuleOptions): Provider {
   return {
     provide: SENTRY_TOKEN,
-    useValue: new SentryService(options)
+    useValue: new SentryService('app', options)
   }
 }
